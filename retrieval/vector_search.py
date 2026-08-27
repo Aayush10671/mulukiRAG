@@ -15,7 +15,6 @@ load_dotenv()
 
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-
 COLLECTION_NAME = "legal_documents"
 
 
@@ -23,11 +22,7 @@ COLLECTION_NAME = "legal_documents"
 # Connect to Qdrant
 # ------------------------------------------------------------
 
-client = QdrantClient(
-    url=QDRANT_URL,
-    api_key=QDRANT_API_KEY
-)
-
+client = QdrantClient(url=QDRANT_URL,api_key=QDRANT_API_KEY)
 
 def search(query, top_k=5):
     """
@@ -44,7 +39,6 @@ def search(query, top_k=5):
     ).points
 
     return results
-
 
 # ------------------------------------------------------------
 # Test
