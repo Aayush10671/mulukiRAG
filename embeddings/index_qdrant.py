@@ -39,10 +39,7 @@ def main():
     # Connect to Qdrant Cloud
     # --------------------------------------------------------
 
-    client = QdrantClient(
-        url=QDRANT_URL,
-        api_key=QDRANT_API_KEY
-    )
+    client = QdrantClient(url=QDRANT_URL,api_key=QDRANT_API_KEY)
 
     # --------------------------------------------------------
     # Load chunks
@@ -111,18 +108,12 @@ def main():
                 payload=chunk
             )
         )
-
     # --------------------------------------------------------
     # Upload points to Qdrant
     # --------------------------------------------------------
 
-    client.upsert(
-        collection_name=COLLECTION_NAME,
-        points=points
-    )
-
+    client.upsert(collection_name=COLLECTION_NAME,points=points)
     print(f"Uploaded {len(points)} points to Qdrant Cloud")
-
 
 if __name__ == "__main__":
     main()
