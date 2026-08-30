@@ -1,0 +1,115 @@
+{
+    "total_questions": 49,
+    "failed_questions": 3,
+    "passed_questions": 46,
+    "details": [
+        {
+            "question": "What is the limitation period for a lawsuit concerning an act or action under the chapter on ownership and possession?",
+            "expected_sources": [
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "275"
+                }
+            ],
+            "retrieved": [
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "123",
+                    "score": 0.9909
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "412",
+                    "score": 0.9899
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "53",
+                    "score": 0.9899
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "168",
+                    "score": 0.9896
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "134",
+                    "score": 0.9891
+                }
+            ]
+        },
+        {
+            "question": "What is the limitation period for a lawsuit concerning an act or action under the chapter on uses of property?",
+            "expected_sources": [
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "286"
+                }
+            ],
+            "retrieved": [
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "123",
+                    "score": 0.9949
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "53",
+                    "score": 0.9948
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "168",
+                    "score": 0.9941
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "134",
+                    "score": 0.994
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "265",
+                    "score": 0.9934
+                }
+            ]
+        },
+        {
+            "question": "What law applies to matters not specifically addressed by the Domestic Violence Act?",
+            "expected_sources": [
+                {
+                    "source": "Domestic-Violence-Act",
+                    "section_number": "16"
+                }
+            ],
+            "retrieved": [
+                {
+                    "source": "Domestic-Violence-Act",
+                    "section_number": "4",
+                    "score": 0.1654
+                },
+                {
+                    "source": "Domestic-Violence-Act",
+                    "section_number": "1",
+                    "score": 0.0996
+                },
+                {
+                    "source": "Domestic-Violence-Act",
+                    "section_number": "2",
+                    "score": 0.072
+                },
+                {
+                    "source": "National-Civil-Code",
+                    "section_number": "4",
+                    "score": 0.0404
+                },
+                {
+                    "source": "Domestic-Violence-Act",
+                    "section_number": "3",
+                    "score": 0.0389
+                }
+            ]
+        }
+    ]
+}

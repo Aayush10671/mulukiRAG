@@ -19,7 +19,7 @@ client = OpenAI(
 )
 
 
-MODEL_NAME = "moonshotai/kimi-k2-instruct"
+MODEL_NAME = "nvidia/nemotron-3-ultra-550b-a55b"
 
 def generate_answer(query, results):
 
@@ -36,7 +36,7 @@ def generate_answer(query, results):
                 "content": user_prompt
             }
         ],
-        temperature=0.0,
-        max_tokens=1000
+        temperature=0.3,
+        max_tokens=10000
     )
     return response.choices[0].message.content
