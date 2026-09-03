@@ -13,7 +13,6 @@ FILES = {
     "domestic_violence.txt": "clean_domestic_violence.txt",
 }
 
-
 def clean_text(text: str) -> str:
     # Remove carriage returns
     text = text.replace("\r", "")

@@ -2,20 +2,10 @@ from pathlib import Path
 import json
 import re
 
-
-# ============================================================
-# FOLDERS
-# ============================================================
-
 PROCESSED_DIR = Path("data/processed")
 CHUNKS_DIR = Path("data/chunks")
-
 CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
 
-
-# ============================================================
-# INPUT FILES
-# ============================================================
 
 FILES = {
     "clean_penal_code.txt": "National-Penal-Code",
@@ -24,39 +14,18 @@ FILES = {
     "clean_domestic_violence.txt": "Domestic-Violence-Act",
 }
 
-
-# ============================================================
-# PATTERNS
-# ============================================================
-
-# ------------------------------------------------------------
-# PART
-#
-# Examples:
-#
 # Part-1
 # Part -1
 # Part – 1
 # Part 1
-# ------------------------------------------------------------
-
 PART_PATTERN = re.compile(
     r"^\s*Part\s*[-–—]?\s*(\d+)\s*$",
     re.IGNORECASE
 )
-
-
-# ------------------------------------------------------------
-# CHAPTER
-#
-# Examples:
-#
 # Chapter-1
 # Chapter - 1
 # Chapter – 2
 # Chapter 3
-# ------------------------------------------------------------
-
 CHAPTER_PATTERN = re.compile(
     r"^\s*Chapter\s*[-–—]?\s*(\d+)\s*$",
     re.IGNORECASE
@@ -116,7 +85,6 @@ def is_page_number(line):
     """
 
     return bool(re.fullmatch(r"\d+", line.strip()))
-
 
 def is_part(line):
     """Check whether a line is a Part heading."""
@@ -527,10 +495,6 @@ def process_file(file_name, source):
 
     return chunks
 
-
-# ============================================================
-# MAIN
-# ============================================================
 
 def main():
 

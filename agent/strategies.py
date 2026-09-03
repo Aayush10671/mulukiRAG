@@ -14,6 +14,7 @@ client = OpenAI(
 )
 
 MODEL_NAME = "nvidia/nemotron-3-ultra-550b-a55b"
+# MODEL_NAME = "openai/gpt-oss-20b"
 
 # ---------------------------------------------------------
 # Strategy 1 : Original Query

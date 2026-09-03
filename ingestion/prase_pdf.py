@@ -6,7 +6,6 @@ RAW_DIR = Path("data/raw")
 
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-
 def extract_text_from_pdf(pdf_path: Path, output_path: Path):
 
     document = pymupdf.open(pdf_path)
