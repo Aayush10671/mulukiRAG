@@ -1,6 +1,8 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
 from retrieval.vector_search import search as vector_search
 from retrieval.bm25 import search as bm25_search
 from retrieval.rrf import reciprocal_rank_fusion
@@ -26,18 +28,9 @@ def retrieve(query, vector_top_k=20, bm25_top_k=20, final_top_k=5):
     bm25_results = bm25_search(query, top_k=bm25_top_k)
 
     # 4. Combine both rankings using RRF
-    rrf_results = reciprocal_rank_fusion(
-        vector_results,
-        bm25_results
-    )
-
+    rrf_results = reciprocal_rank_fusion(vector_results,bm25_results)
     # 5. Re-rank the combined results
-    final_results = rerank(
-        query,
-        rrf_results,
-        top_k=final_top_k
-    )
-
+    final_results = rerank(query,rrf_results,top_k=final_top_k)
     return final_results
 
 

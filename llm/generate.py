@@ -37,6 +37,6 @@ def generate_answer(query, results):
             }
         ],
         temperature=0.3,
-        max_tokens=10000
+        max_tokens=1800
     )
     return response.choices[0].message.content
