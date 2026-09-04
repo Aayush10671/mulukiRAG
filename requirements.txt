@@ -19,12 +19,12 @@ torch==2.13.0
 huggingface_hub==1.28.0
 safetensors==0.8.0
 
-langgraph==1.2.11
-langgraph-checkpoint==4.2.0
-langgraph-prebuilt==1.1.0
-langgraph-sdk==0.4.4
-langchain-core==1.6.1
-langsmith==0.11.2
+# langgraph==1.2.11
+# langgraph-checkpoint==4.2.0
+# langgraph-prebuilt==1.1.0
+# langgraph-sdk==0.4.4
+# langchain-core==1.6.1
+# langsmith==0.11.2
 
 numpy==2.5.2
 scipy==1.18.1
