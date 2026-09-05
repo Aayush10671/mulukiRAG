@@ -58,7 +58,6 @@ PyMuPDF==1.26.4
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.3
 python-multipart==0.0.20
-pywin32==312
 PyYAML==6.0.2
 qdrant-client==1.19.0
 rank-bm25==0.2.2
