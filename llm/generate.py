@@ -1,13 +1,14 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
 from llm.prompts import build_prompt
 load_dotenv()
-
-NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
+QDRANT_URL = os.getenv("QDRANT_URL") or st.secrets["QDRANT_URL"]
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY") or st.secrets["QDRANT_API_KEY"]
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY") or st.secrets["NVIDIA_API_KEY"]
 
 if not NVIDIA_API_KEY:
     raise ValueError("NVIDIA_API_KEY is missing from .env")

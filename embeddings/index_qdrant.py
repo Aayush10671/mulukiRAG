@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 import os
-
+import streamlit as st
 import numpy as np
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient, models
@@ -13,8 +13,9 @@ from qdrant_client import QdrantClient, models
 
 load_dotenv()
 
-QDRANT_URL = os.getenv("QDRANT_URL")
-QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+QDRANT_URL = os.getenv("QDRANT_URL") or st.secrets["QDRANT_URL"]
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY") or st.secrets["QDRANT_API_KEY"]
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or st.secrets["OPENAI_API_KEY"]
 
 COLLECTION_NAME = "legal_documents"
 

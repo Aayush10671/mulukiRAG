@@ -1,5 +1,6 @@
 import sys
 import os
+import streamlit as st
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dotenv import load_dotenv
@@ -13,8 +14,8 @@ from embeddings.model import embed_query
 
 load_dotenv()
 
-QDRANT_URL = os.getenv("QDRANT_URL")
-QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+QDRANT_URL = os.getenv("QDRANT_URL") or st.secrets["QDRANT_URL"]
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY") or st.secrets["QDRANT_API_KEY"]
 COLLECTION_NAME = "legal_documents"
 
 
