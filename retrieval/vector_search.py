@@ -37,6 +37,7 @@ def search(query, top_k=5):
         limit=top_k,
         with_payload=True
     ).points
+    print("searched into qdrant")
 
     return results
 
